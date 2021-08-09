@@ -3,7 +3,6 @@
   "chromeWebSecurity": false,
   "experimentalSessionSupport": true,
   "experimentalStudio": true,
-  "pluginsFile": false,
   "env": {
     "viewportWidthBreakpoint": 768
   }

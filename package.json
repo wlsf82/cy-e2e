@@ -8,7 +8,7 @@
     "cy:open": "cypress open",
     "cy:open:tablet": "cypress open --config viewportWidth=767,viewportHeight=480",
     "test": "cypress run",
-    "test:tablet": "cypress run --config viewportWidth=767,viewportHeight=480"
+    "test:tablet": "cypress run --config viewportWidth=767,viewportHeight=480 --env grepTags=@desktop-and-tablet"
   },
   "keywords": [],
   "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev)",
@@ -17,6 +17,7 @@
     "cypress": "^8.2.0",
     "cypress-dark": "^1.8.0",
     "cypress-file-upload": "^5.0.8",
+    "cypress-grep": "^2.5.3",
     "cypress-iframe": "^1.0.1",
     "cypress-mailosaur": "^2.3.3",
     "eslint": "^7.32.0",
