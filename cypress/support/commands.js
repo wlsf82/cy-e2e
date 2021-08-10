@@ -58,7 +58,7 @@ Cypress.Commands.add('deleteNote', note => {
   cy.contains('.list-group-item', note).should('not.exist')
 })
 
-Cypress.Commands.add('fillSettingsForm', () => {
+Cypress.Commands.add('fillSettingsFormAndSubmit', () => {
   cy.visit('/settings')
   cy.get('#storage').type('1')
   cy.get('#name').type('Mary Doe')
@@ -78,7 +78,7 @@ Cypress.Commands.add('fillSettingsForm', () => {
   cy.contains('button', 'Purchase').click()
 })
 
-Cypress.Commands.add('fillSignupForm', (email, password) => {
+Cypress.Commands.add('fillSignupFormAndSubmit', (email, password) => {
   cy.visit('/signup')
   cy.get('#email').type(email)
   cy.get('#password').type(password, { log: false })

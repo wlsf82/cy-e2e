@@ -1,3 +1,5 @@
+/// <reference path="../support/commands.d.ts" />
+
 describe('Scenarios where authentication is a pre-requirement', () => {
   beforeEach(() => {
     cy.intercept('GET', '**/notes').as('getNotes')
@@ -24,7 +26,7 @@ describe('Scenarios where authentication is a pre-requirement', () => {
   it('successfully submits the form', () => {
     cy.intercept('POST', '**/prod/billing').as('paymentRequest')
 
-    cy.fillSettingsForm()
+    cy.fillSettingsFormAndSubmit()
 
     cy.wait('@getNotes')
     cy.wait('@paymentRequest').then(response => {
