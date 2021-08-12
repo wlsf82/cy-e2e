@@ -6,5 +6,9 @@
   "projectId": "q1m4kc",
   "env": {
     "viewportWidthBreakpoint": 768
+  },
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
   }
 }
