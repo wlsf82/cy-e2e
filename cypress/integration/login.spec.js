@@ -8,8 +8,6 @@ it('successfully logs in', () => {
     Cypress.env('USER_PASSWORD'),
     { cacheSession: false }
   )
-  cy.visit('/')
 
   cy.wait('@getNotes')
-  cy.contains('h1', 'Your Notes').should('be.visible')
 })
