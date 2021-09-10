@@ -23,7 +23,7 @@ describe('Scenarios where authentication is a pre-requirement', () => {
     cy.wait('@getNotes')
   })
 
-  it('successfully submits the form', () => {
+  it('successfully submits the settings form', () => {
     cy.intercept('POST', '**/prod/billing').as('paymentRequest')
 
     cy.fillSettingsFormAndSubmit()
